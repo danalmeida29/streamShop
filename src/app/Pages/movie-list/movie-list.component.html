@@ -1,0 +1,28 @@
+<div class="content">
+    <div class="posionImg">
+        <img class="img" src="{{sessionMovie.image}}">
+    </div>
+    <div class="posionTitle">
+        <mat-card-title class="title">
+            {{sessionMovie.title}}
+        </mat-card-title>
+    </div>
+</div>
+<div class="content1">
+    <mat-card class="card" *ngFor="let sessionMovie of sessionMovie">
+        <mat-card-title class="name">
+                <img class="icon" src="../../../assets/ico/heart (64).png">
+                {{sessionMovie.name}}
+        </mat-card-title>
+        <mat-card-subtitle class="address">
+            {{sessionMovie.address}} {{sessionMovie.addressComplement}}
+        </mat-card-subtitle>
+        <hr>
+        <mat-card-title class="room" *ngFor="let room of sessionMovie.rooms">
+            {{room.name}} - <a class="language">{{room.types}}</a>
+        </mat-card-title>
+        <mat-card-content class="time">
+            {{sessionMovie.rooms[0]}}
+        </mat-card-content>
+    </mat-card>
+</div>

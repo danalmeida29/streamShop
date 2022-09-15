@@ -1,0 +1,119 @@
+.content{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    width: auto;
+    padding: 1px;
+}
+
+.content1{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    width: auto;
+    padding: 1px;
+}
+
+.posionImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img{
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.posionTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 215px;
+}
+
+.title{
+    margin-bottom: 5px;
+    color: #000000DD;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: medium;
+    letter-spacing: 0.4px;
+    opacity:1;
+}
+
+.card{
+    width: 900px;
+    height: 134px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: #F1F3F4 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.icon{
+    width: 19px;
+    height: 18px;
+}
+
+.name{
+    text-align: left;
+    font-family: roboto;
+    font-size: 20px;
+    letter-spacing: 0.32px;
+    color: #000000DD;
+    opacity: 1;
+}
+
+.address{
+    text-align: left;
+    font-family: roboto;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.24px;
+    color: #000000DD;
+    opacity: 1; 
+}
+
+.room{
+    text-align: left;
+    font-family: roboto;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.24px;
+    color: #000000DD;
+    opacity: 1;
+}
+
+.language{
+    text-align: left;
+    font-family: roboto;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0.24px;
+    color: #FF7300DD;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.time {
+    width: 90px;
+    height: 32px;
+    color: #1860B3DD;
+    border: 1px solid #1860B3DD;
+    border-radius: 2px;
+    opacity: 1;
+    text-align: center;
+    align-items: center;
+}

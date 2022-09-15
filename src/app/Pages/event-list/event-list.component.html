@@ -1,0 +1,20 @@
+<div class="posionFilter">
+    <mat-form-field class="filter">
+        <input matInput (input)="filterEvent($event)" style="font-family:nunito; color:#000000A3; font-size: 14px;" type="text" placeholder="Pesquisar">
+    </mat-form-field>
+</div>
+<div class="content">
+    <mat-card class="card" *ngFor="let eventList of filteredList">
+        <div class="posionImg">
+            <img class="img" src="{{eventList.image}}">
+        </div>
+        <mat-card-title class="title" >
+            <h3 title="{{eventList.title}}">{{eventList.title}}</h3>
+            
+        </mat-card-title>
+        <mat-card-subtitle class="subtitle">
+            {{eventList.genres}}
+        </mat-card-subtitle>
+        <button class="sendButton" mat-raised-button (click)="movie(eventList.id)">Comprar</button>
+    </mat-card>
+</div>
