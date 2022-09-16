@@ -9,12 +9,13 @@
             <img class="img" src="{{eventList.image}}">
         </div>
         <mat-card-title class="title" >
-            <h3 title="{{eventList.title}}">{{eventList.title}}</h3>
-            
+            <h3 title="{{eventList.title}}">{{eventList.title}}</h3>    
         </mat-card-title>
         <mat-card-subtitle class="subtitle">
             {{eventList.genres}}
         </mat-card-subtitle>
-        <button class="sendButton" mat-raised-button (click)="movie(eventList.id)">Comprar</button>
+        <div class="posionButton">
+            <button class="sendButton" mat-raised-button (click)="movie(eventList.id)">Comprar</button>
+        </div>
     </mat-card>
 </div>

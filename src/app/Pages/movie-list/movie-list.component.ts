@@ -9,8 +9,9 @@ import { EventService } from 'src/app/Core/event.service';
 export class MovieListComponent implements OnInit {
 
   movieId: any;
-  eventId: any;
+  theatersId: any;
   sessionMovie: any;
+  theatersMovie: any;
   Erro: any;
 
   constructor(
@@ -20,11 +21,25 @@ export class MovieListComponent implements OnInit {
   ngOnInit(): void {
     this.movieId = localStorage.getItem('movieId');
     this.getMovie();
+    this.getTheaters();
+  }
+
+  getTheaters(){
+    this.eventService.getTheatersId(this.movieId).subscribe(
+      (res: any) =>
+      {
+        this.sessionMovie = res;
+        console.log(this.sessionMovie)
+      },
+      (error: any) => {
+        this.Erro = error;
+      }
+    )
   }
 
   getMovie(){
-    this.eventService.movieId(this.movieId).subscribe(
-      (res:any) =>
+    this.eventService.getMovieId(this.movieId).subscribe(
+      (res: any) =>
       {
         this.sessionMovie = res;
         console.log(this.sessionMovie)

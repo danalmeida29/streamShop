@@ -99,21 +99,32 @@
 .language{
     text-align: left;
     font-family: roboto;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: normal;
     letter-spacing: 0.24px;
     color: #FF7300DD;
     text-transform: uppercase;
     opacity: 1;
+    margin-right: 16px;
 }
 
+.posionTime{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+}
 .time {
+    display: flex;
     width: 90px;
     height: 32px;
     color: #1860B3DD;
     border: 1px solid #1860B3DD;
     border-radius: 2px;
     opacity: 1;
-    text-align: center;
     align-items: center;
+    margin-right: 16px;
+    align-content: center;
+    justify-content: center;
 }

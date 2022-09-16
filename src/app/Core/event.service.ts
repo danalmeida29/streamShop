@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 
-const BASE_URL = 'https://61aa6838bfb110001773f224.mockapi.io/streamshop-test/api/v1/events';
+const API_URL = environment.BASE_URL_API
 
 @Injectable({
   providedIn: 'root'
@@ -15,12 +16,17 @@ export class EventService {
  * @returns Obtem uma lista de eventos 
  */
  getEventList(){
-    var urlString =`${BASE_URL}`;
+    var urlString =`${API_URL}`;
     return this.http.get(urlString) 
   }
 
-  movieId(id:any){
-    var urlString = `${BASE_URL}/${id}/theaters`;
+  getMovieId(id:any){
+    var urlString = `${API_URL}/${id}`;
+    return this.http.get(urlString) 
+  }
+
+  getTheatersId(id:any){
+    var urlString = `${API_URL}/${id}/theaters/`;
     return this.http.get(urlString) 
   }
 

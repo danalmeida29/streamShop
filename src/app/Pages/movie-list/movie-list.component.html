@@ -18,11 +18,13 @@
             {{sessionMovie.address}} {{sessionMovie.addressComplement}}
         </mat-card-subtitle>
         <hr>
+
         <mat-card-title class="room" *ngFor="let room of sessionMovie.rooms">
-            {{room.name}} - <a class="language">{{room.types}}</a>
+            {{room.name}} - <span class="language" *ngFor="let type of room.types">{{type}}</span>
         </mat-card-title>
-        <mat-card-content class="time">
-            {{sessionMovie.rooms[0]}}
+
+        <mat-card-content class="posionTime" *ngFor="let room of sessionMovie.rooms">
+            <span class="time" *ngFor="let session of room.sessions"> {{session.time}}</span>
         </mat-card-content>
     </mat-card>
 </div>
