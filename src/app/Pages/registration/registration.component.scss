@@ -23,7 +23,6 @@
 .campo{
     width: 900px;
     height: 56px;
-    margin-top: 20px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #33333399;
     border-radius: 2px;
@@ -41,9 +40,18 @@
 .sendButton{
     width: 900px;
     height: 32px;
+    margin-top: 208px;
     color:#FFFFFF;
     background: #1E1E1E 0% 0% no-repeat padding-box;
     border-radius: 4px;
     opacity: 1;
     align-items: flex-start;
+    cursor: pointer;
+}
+
+.posionCampo{
+    width: 900px;
+    height: 56px;
+    margin-top: 20px;
+    margin-bottom:16px ;
 }

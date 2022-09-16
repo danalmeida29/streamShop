@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EventService } from 'src/app/Core/event.service';
 
 @Component({
@@ -9,12 +10,12 @@ import { EventService } from 'src/app/Core/event.service';
 export class MovieListComponent implements OnInit {
 
   movieId: any;
-  theatersId: any;
   sessionMovie: any;
   theatersMovie: any;
   Erro: any;
 
   constructor(
+    private router: Router,
     private eventService: EventService
   ) { }
 
@@ -24,20 +25,11 @@ export class MovieListComponent implements OnInit {
     this.getTheaters();
   }
 
-  getTheaters(){
-    this.eventService.getTheatersId(this.movieId).subscribe(
-      (res: any) =>
-      {
-        this.sessionMovie = res;
-        console.log(this.sessionMovie)
-      },
-      (error: any) => {
-        this.Erro = error;
-      }
-    )
-  }
-
-  getMovie(){
+  /**
+   * Metodo que obtem todos os dados relacionados ao filme escolhido
+   * Ex: Nome, Imagem.
+   */
+   getMovie(){
     this.eventService.getMovieId(this.movieId).subscribe(
       (res: any) =>
       {
@@ -48,6 +40,28 @@ export class MovieListComponent implements OnInit {
         this.Erro = error;
       }
     )
+  }
+
+  /**
+   * Metodo que obtem os dados dos cinemas que exebiram o filme selecionado
+   * Sessão, Sala, Horário.
+  */
+   getTheaters(){
+    this.eventService.getTheatersId(this.movieId).subscribe(
+      (res: any) =>
+      {
+        this.theatersMovie = res;
+        console.log("theatersMovie:",this.theatersMovie)
+      },
+      (error: any) => {
+        this.Erro = error;
+      }
+    )
+  }
+
+
+  onNavigateTo(pageName: any) {
+    this.router.navigate([`/${pageName}`]);
   }
 
 }

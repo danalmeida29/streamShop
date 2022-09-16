@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventService } from 'src/app/Core/event.service';
 
@@ -13,6 +13,8 @@ export class EventListComponent implements OnInit {
   movieEvent: any;
   filteredList: any;
   movieId: any;
+
+  @Output() hideButton = new EventEmitter();
 
   constructor(
     private router: Router,
@@ -44,7 +46,6 @@ export class EventListComponent implements OnInit {
   movie(id:any){
     localStorage.setItem('movieId', id);
     this.onNavigateTo('cinemas')
-    console.log('console id', id);
   }
 
   onNavigateTo(pageName: any) {

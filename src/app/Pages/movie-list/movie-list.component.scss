@@ -28,18 +28,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 8px;
 }
 
 .img{
     width: 150px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 
 .posionTitle{
-    display: flex;
+    display: inline-table;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 215px;
+    width: 930px;
+    margin-bottom: -9px;
 }
 
 .title{
@@ -53,9 +55,10 @@
 }
 
 .card{
+    display: inline-table;
     width: 900px;
     height: 134px;
-    margin-top: 20px;
+    margin-top: 12px;
     margin-bottom: 10px;
     background: #F1F3F4 0% 0% no-repeat padding-box;
     border-radius: 2px;
@@ -105,11 +108,11 @@
     color: #FF7300DD;
     text-transform: uppercase;
     opacity: 1;
-    margin-right: 16px;
+    margin-right: 31px;
 }
 
 .posionTime{
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
     text-align: center;
@@ -127,4 +130,9 @@
     margin-right: 16px;
     align-content: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.price{
+    margin-right: 54px; 
 }

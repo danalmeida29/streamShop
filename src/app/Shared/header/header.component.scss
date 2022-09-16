@@ -1,14 +1,26 @@
 .toolbar {
-    display: flex;
-    height: auto;
-    background: black;
-    max-height: 20px;
-    min-height: 60px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    }
-  
-  .Logo{
-    width: 238px;
-  }
+  display: grid;
+  grid-template-columns: 42% 50%;
+  height: auto;
+  background: black;
+  max-height: 20px;
+  min-height: 60px;
+  justify-items: start;
+}
+.posionLogo{
+
+  height: auto;
+  max-height: 20px;
+  min-height: 60px;
+}
+.Logo{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  width: 238px;
+}
+
+.arrowBack{
+  grid-column-start: 1;
+  background: black;
+  color:white;
+}

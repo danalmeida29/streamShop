@@ -10,6 +10,8 @@ const API_URL = environment.BASE_URL_API
 })
 export class EventService {
 
+  hidenButton: boolean = true;
+
   constructor( private http: HttpClient) { }
 /**
  * 
@@ -28,6 +30,15 @@ export class EventService {
   getTheatersId(id:any){
     var urlString = `${API_URL}/${id}/theaters/`;
     return this.http.get(urlString) 
+  }
+
+  hideButton(){
+    if(this.hidenButton){
+      this.hidenButton = false;
+    } else{
+      this.hidenButton = true;
+    }
+    return this.hidenButton;
   }
 
 }

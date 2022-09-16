@@ -1,3 +1,8 @@
 <mat-toolbar class="toolbar">
+    <button class="arrowBack" *ngIf="goBackButton" (click)="back()">
+        <mat-icon><span class="material-symbols-outlined">
+            chevron_left
+            </span></mat-icon>
+    </button>
     <img class="Logo" src="https://streamshop.com.br/wp-content/uploads/2020/12/STREAMSHOPLOGOSITE.png" href="https://streamshop.com.br/">
 </mat-toolbar>

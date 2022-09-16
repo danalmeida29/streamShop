@@ -1,0 +1,19 @@
+.content{
+    display: flex;
+    height: auto;
+    min-height: 720px;
+    max-height: 100px;
+    background: #0000001F 0% 0% no-repeat padding-box;
+    opacity: 1;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.button{
+    width: 268px;
+    height: 48px;
+    background: #00000099 0% 0% no-repeat padding-box;
+    color:#ffff;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    opacity: 1;
+}

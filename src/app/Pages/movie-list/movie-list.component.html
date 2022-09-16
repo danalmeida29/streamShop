@@ -1,7 +1,7 @@
+<div class="posionImg">
+    <img class="img" src="{{sessionMovie.image}}">
+</div>
 <div class="content">
-    <div class="posionImg">
-        <img class="img" src="{{sessionMovie.image}}">
-    </div>
     <div class="posionTitle">
         <mat-card-title class="title">
             {{sessionMovie.title}}
@@ -9,22 +9,22 @@
     </div>
 </div>
 <div class="content1">
-    <mat-card class="card" *ngFor="let sessionMovie of sessionMovie">
+    <mat-card class="card" *ngFor="let movie of theatersMovie">
         <mat-card-title class="name">
                 <img class="icon" src="../../../assets/ico/heart (64).png">
-                {{sessionMovie.name}}
+                {{movie.name}}
         </mat-card-title>
         <mat-card-subtitle class="address">
-            {{sessionMovie.address}} {{sessionMovie.addressComplement}}
+            {{movie.address}} {{movie.addressComplement}}
         </mat-card-subtitle>
         <hr>
 
-        <mat-card-title class="room" *ngFor="let room of sessionMovie.rooms">
-            {{room.name}} - <span class="language" *ngFor="let type of room.types">{{type}}</span>
+        <mat-card-title class="room" *ngFor="let room of movie.rooms">
+            {{room.name}} - <span class="language" *ngFor="let type of room.types">{{type}}</span><br> 
+            <span class="posionTime">
+                <span class="time" *ngFor="let session of room.sessions"  (click)="onNavigateTo('cadastro')"> {{session.time}}</span>
+            </span> <br>
+            <span class="price" *ngFor="let session of room.sessions">{{session.price | currency: 'BRL': true :'1.2-2'}}</span>
         </mat-card-title>
-
-        <mat-card-content class="posionTime" *ngFor="let room of sessionMovie.rooms">
-            <span class="time" *ngFor="let session of room.sessions"> {{session.time}}</span>
-        </mat-card-content>
     </mat-card>
 </div>
