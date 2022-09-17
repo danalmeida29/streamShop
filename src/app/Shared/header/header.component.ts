@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
     private eventService: EventService,
     private router: Router,
     private location: Location
-    ) { 
+    ) {
     this.router.events.subscribe((event: Event) => {
       this.currentRoute = "";
       if (event instanceof NavigationStart) {
@@ -34,13 +34,17 @@ export class HeaderComponent implements OnInit {
   
   ngOnInit(): void {
   }
-
+/**
+ * Metodo que volta a rota das paginas
+ */
   back(): void {
     this.location.back()
   }
-
+  /**
+  * Metodo que observa qual pagina deve exiber o button de voltar
+  */
   hideButton(){
-    if(this.currentRoute.id == 1 || this.currentRoute.url == '/' ){
+    if(this.currentRoute.url == '/' || this.currentRoute.url == '/Info' ){
       this.goBackButton = false;
     } else{
       this.goBackButton = true;

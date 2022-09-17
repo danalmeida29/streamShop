@@ -23,8 +23,9 @@
             {{room.name}} - <span class="language" *ngFor="let type of room.types">{{type}}</span><br> 
             <span class="posionTime">
                 <span class="time" *ngFor="let session of room.sessions"  (click)="onNavigateTo('cadastro')"> {{session.time}}</span>
-            </span> <br>
-            <span class="price" *ngFor="let session of room.sessions">{{session.price | currency: 'BRL': true :'1.2-2'}}</span>
+            </span> 
+            <!-- <br>
+            <span class="price" *ngFor="let session of room.sessions">{{session.price | currency: 'BRL': true :'1.2-2'}}</span> -->
         </mat-card-title>
     </mat-card>
 </div>
