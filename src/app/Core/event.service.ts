@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Cadastro } from './cadastro';
 
 
 const API_URL = environment.BASE_URL_API
+const BASE_URL = environment.URL_API
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +41,14 @@ export class EventService {
       this.hidenButton = true;
     }
     return this.hidenButton;
+  }
+
+  private registro(FormData: Cadastro){
+    return this.http.post(`${BASE_URL}/cadastros`, FormData);
+  }
+
+  save(FormData: Cadastro){
+    return this.registro(FormData);
   }
 
 }

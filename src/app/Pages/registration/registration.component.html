@@ -1,18 +1,19 @@
 <div class="content">
-    <form class="form">
+    <form matForm class="form" [formGroup]="clienteForm">
         <mat-form-field class="posionCampo">
-            <input matInput class="campo" placeholder="Nome"/>
+            <input matInput type="string" class="campo" formControlName="name" placeholder="Nome"/>
         </mat-form-field>
         <mat-form-field class="posionCampo">
-            <input matInput class="campo" placeholder="E-mail"/>
+            <input matInput type="email" class="campo" formControlName="email" placeholder="E-mail"/>
         </mat-form-field>
         <mat-form-field class="posionCampo">
-            <input matInput class="campo" placeholder="Telefone"/>
+            <input matInput type="number" class="campo" formControlName="phone" placeholder="Telefone"/>
         </mat-form-field>
         <section class="termo">
             <mat-checkbox class="checkBox"> Quero receber notificações</mat-checkbox>
             <mat-checkbox class="checkBox"> Li e aceito os termo de uso</mat-checkbox>
         </section>
-    </form>
-    <button mat-raise-button class="sendButton" (click)="onNavigateTo('Info')"> Finalizar Cadastro</button>
+        
+        <button mat-raise-button type="submit" [disabled]="clienteForm.invalid" class="sendButton" (click)="onSubmit()" (click)="onNavigateTo('Info')">Finalizar Cadastro</button>
+    </form> 
 </div>

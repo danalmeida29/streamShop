@@ -1,0 +1,50 @@
+{
+  "cadastros": [
+    {
+      "id": 1,
+      "name": "Daniel Mendes de Almeida",
+      "phone": 11982482014,
+      "email": "daniel.m.almeida.97@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Hernani de Souza Almeida",
+      "phone": 11986146520,
+      "email": "daniel.m.almeida.97@gmail.com",
+      "checkBoxNotificação": null,
+      "checkBoxTermo": null
+    },
+    {
+      "id": 3,
+      "name": "Camila",
+      "phone": 11987108917,
+      "email": "daniel.m.almeida.97@gmail.com",
+      "checkBoxNotificação": null,
+      "checkBoxTermo": null
+    },
+    {
+      "id": 4,
+      "name": "Daniel Mendes de Almeida",
+      "phone": 11982482014,
+      "email": "daniel.m.almeida.97@gmail.com",
+      "checkBoxNotificação": null,
+      "checkBoxTermo": null
+    },
+    {
+      "id": 5,
+      "name": null,
+      "phone": null,
+      "email": null,
+      "checkBoxNotificação": null,
+      "checkBoxTermo": null
+    },
+    {
+      "id": 6,
+      "name": "Aliper",
+      "phone": 11986146520,
+      "email": "DanielMendesdeAlmeida@hotmail.com",
+      "checkBoxNotificação": null,
+      "checkBoxTermo": null
+    }
+  ]
+}
