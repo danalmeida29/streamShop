@@ -13,10 +13,13 @@
   max-height: 20px;
   min-height: 60px;
 }
-.Logo{
+a{
   grid-column-start: 2;
   grid-column-end: 5;
+}
+.Logo{
   width: 238px;
+  cursor: pointer;
 }
 
 .arrowBack{

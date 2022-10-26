@@ -1,4 +1,12 @@
 {
   "cadastros": [
+    {
+      "id": 1,
+      "name": "Daniel",
+      "phone": 58565456,
+      "email": "daniel.m.almeida.97@gmail.com",
+      "checkBoxNotificação": null,
+      "checkBoxTermo": null
+    }
   ]
 }
